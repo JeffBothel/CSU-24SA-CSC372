@@ -3,15 +3,15 @@ import java.util.Random;
 
 public class TestUnit {
     private static String printStudent(Student student) {
-        return "Roll Number: " + student.rollNumber + "\n" +
-               "First Name: " + student.firstName + "\n" +
-               "Last Name: " + student.lastName + "\n";
+        return "Roll Number: " + student.rollNumber + "; " +
+               "First Name: " + student.firstName + "; " +
+               "Last Name: " + student.lastName;
     }
 
     public static void main(String[] args) {
         Random rand = new Random();
-        System.out.println("Module 6 Testing Unit");
-        System.out.println("Testing Student class");
+        System.out.println("****Module 6 Testing Unit****");
+        System.out.println("\n####Testing Student class");
         Student student1 = new Student(rand.nextInt(64),"Jason","Dibbert");
         Student student2 = new Student(rand.nextInt(64),"Augusta","Greenholt");
         Student student3 = new Student(rand.nextInt(64),"Ivah","Prohaska");
@@ -36,8 +36,7 @@ public class TestUnit {
         Student student23 = new Student(rand.nextInt(64),"Camren","Stiedemann");
         Student student24 = new Student(rand.nextInt(64),"Jaunita","Romaguera");
         Student student25 = new Student(rand.nextInt(64),"Pete","Schmeler");
-        Student student26 = new Student(rand.nextInt(64),"Arvid","Torp");
-        
+        Student student26 = new Student(rand.nextInt(64),"Arvid","Torp");        
 
         ArrayList<Student> students = new ArrayList<Student>();
         students.add(student1);
@@ -79,20 +78,21 @@ public class TestUnit {
 
         System.out.println("####Testing StudentList class");
         StudentList studentList = new StudentList(students);
+        System.out.println("Object was created.");
         
-        System.out.println("####Sorted by roll number:");
+        System.out.println("\n####Sorted by roll number:");
         studentList.sortByRollNumber();
         for(Student student : studentList.students) {
             System.out.println(printStudent(student));
         }
 
-        System.out.println("####Sorted by first name:");
+        System.out.println("\n\n####Sorted by first name:");
         studentList.sortByFirstName();
         for(Student student : studentList.students) {
             System.out.println(printStudent(student));
         }
 
-        System.out.println("####Sorted by last name:");
+        System.out.println("\n\n####Sorted by last name:");
         studentList.sortByLastName();
         for(Student student : studentList.students) {
             System.out.println(printStudent(student));
