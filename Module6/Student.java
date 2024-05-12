@@ -23,6 +23,19 @@ public class Student {
         this.country = "USA";
     }
 
+    public Student(int rollNumber) {
+        this.rollNumber = rollNumber;
+        this.firstName = "John";
+        this.lastName = "Doe";
+        this.email = "john.doe@notrealy.com";
+        this.phone = "123-456-7890";
+        this.address = "123 Main St";
+        this.city = "Anytown";
+        this.state = "CA";
+        this.zip = "12345";
+        this.country = "USA";
+    }
+
     public Student(int rollNumber, String firstName, String lastName) {
         this.rollNumber = rollNumber;
         this.firstName = firstName;
@@ -47,5 +60,42 @@ public class Student {
         this.state = state;
         this.zip = zip;
         this.country = country;
+    }
+
+    // Comparator methods for objects
+    public boolean isGtRollNumber(Student student) {
+        return this.rollNumber > student.rollNumber;
+    }
+
+    public boolean isLtRollNumber(Student student) {
+        return this.rollNumber < student.rollNumber;
+    }
+
+    public boolean isEqRollNumber(Student student) {
+        return this.rollNumber == student.rollNumber;
+    }
+
+    public boolean isGtFirstName(Student student) {
+        return this.firstName.compareTo(student.firstName) > 0;
+    }
+
+    public boolean isLtFirstName(Student student) {
+        return this.firstName.compareTo(student.firstName) < 0;
+    }
+
+    public boolean isEqFirstName(Student student) {
+        return this.firstName.compareTo(student.firstName) == 0;
+    }
+
+    public boolean isGtLastName(Student student) {
+        return this.lastName.compareTo(student.lastName) > 0;
+    }
+
+    public boolean isLtLastName(Student student) {
+        return this.lastName.compareTo(student.lastName) < 0;
+    }
+
+    public boolean isEqLastName(Student student) {
+        return this.lastName.compareTo(student.lastName) == 0;
     }
 }
