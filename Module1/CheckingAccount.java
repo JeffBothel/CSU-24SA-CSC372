@@ -1,7 +1,9 @@
 public class CheckingAccount extends BankAccount {
     // ### Fields for the CheckingAccount class. This extends from BankAccount. ###
+    private double collectedInterest;
     private double interestRate;
     private double overdraftFee;
+    private double overdratAmount;
 
     // ### Constructors for the CheckingAccount class ###
     // Default constructor
@@ -29,6 +31,23 @@ public class CheckingAccount extends BankAccount {
         return overdraftFee;
     }
 
+    // Get the collected interest
+    public double getCollectedInterest() {
+        return collectedInterest;
+    }
+
+    // Add interest to the account
+    public void addInterest() {
+        collectedInterest += getBalance() * interestRate;
+        super.deposit(collectedInterest);
+        collectedInterest = 0;
+    }
+
+    // Get the overdraft amount
+    public double getOverdraftAmount() {
+        return overdratAmount;
+    }
+
     // Get account information
     public String accountSummary() {
         return super.accountSummary() + "\n" +
@@ -53,6 +72,7 @@ public class CheckingAccount extends BankAccount {
         super.processWithdrawal(amount);
         if (getBalance() < 0) {
             super.processWithdrawal(overdraftFee);
+            overdratAmount += overdraftFee;
         }
     }
 }
