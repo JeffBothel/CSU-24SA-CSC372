@@ -10,6 +10,7 @@ public class Student {
     public String zip;
     public String country;
 
+    // Default constructor
     public Student() {
         this.rollNumber = 0;
         this.firstName = "John";
@@ -23,6 +24,7 @@ public class Student {
         this.country = "USA";
     }
 
+    // Constructor with roll number
     public Student(int rollNumber) {
         this.rollNumber = rollNumber;
         this.firstName = "John";
@@ -36,6 +38,7 @@ public class Student {
         this.country = "USA";
     }
 
+    // Constructor with roll number and name
     public Student(int rollNumber, String firstName, String lastName) {
         this.rollNumber = rollNumber;
         this.firstName = firstName;
@@ -49,6 +52,7 @@ public class Student {
         this.country = "USA";
     }
     
+    // Constructor with all fields
     public Student(int rollNumber, String firstName, String lastName, String email, String phone, String address, String city, String state, String zip, String country) {
         this.rollNumber = rollNumber;
         this.firstName = firstName;
@@ -67,34 +71,27 @@ public class Student {
         return this.rollNumber > student.rollNumber;
     }
 
-    public boolean isLtRollNumber(Student student) {
-        return this.rollNumber < student.rollNumber;
-    }
-
+    // Comparator methods for objects
     public boolean isEqRollNumber(Student student) {
         return this.rollNumber == student.rollNumber;
     }
 
+    // Comparator methods for objects
     public boolean isGtFirstName(Student student) {
         return this.firstName.compareTo(student.firstName) > 0;
     }
 
-    public boolean isLtFirstName(Student student) {
-        return this.firstName.compareTo(student.firstName) < 0;
-    }
-
+    // Comparator methods for objects
     public boolean isEqFirstName(Student student) {
         return this.firstName.compareTo(student.firstName) == 0;
     }
 
+    // Comparator methods for objects
     public boolean isGtLastName(Student student) {
         return this.lastName.compareTo(student.lastName) > 0;
     }
 
-    public boolean isLtLastName(Student student) {
-        return this.lastName.compareTo(student.lastName) < 0;
-    }
-
+    // Comparator methods for objects
     public boolean isEqLastName(Student student) {
         return this.lastName.compareTo(student.lastName) == 0;
     }

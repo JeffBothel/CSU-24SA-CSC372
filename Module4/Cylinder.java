@@ -1,6 +1,5 @@
 public class Cylinder extends Shape {
     double radius;
-    double height;
 
     // Constructor for the Cylinder class
     public Cylinder(double radius, double height) {

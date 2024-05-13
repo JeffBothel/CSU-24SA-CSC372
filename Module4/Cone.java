@@ -1,6 +1,5 @@
 public class Cone extends Shape {
     double radius;
-    double height;
 
     // Constructor for the Cone class
     public Cone(double radius, double height) {
